@@ -6,8 +6,8 @@ filename = 'cookie.txt'
 cookie = cookielib.MozillaCookieJar(filename)
 opener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookie))
 postdata = urllib.urlencode({
-	'UserName':'psyjc3',
-	'Password':'wyhhxxTTXS96'
+	'UserName':'xxxx',
+	'Password':'xxxxx'
 	})
 loginUrl = "https://bluecastle.nottingham.ac.uk/Account/Login"
 result = opener.open(loginUrl, postdata)
