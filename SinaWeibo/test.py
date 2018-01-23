@@ -2,8 +2,8 @@
 from weibo import APIClient  
 import webbrowser        #python内置的包  
   
-APP_KEY = '3816420111'#注意替换这里为自己申请的App信息  
-APP_SECRET = 'a9b8b55f140a941c37de285a4e5af7a5'  
+APP_KEY = 'xxxx'#注意替换这里为自己申请的App信息  
+APP_SECRET = 'xxxx'  
 CALLBACK_URL = 'https://api.weibo.com/oauth2/default.html'#回调授权页面  
   
 #利用官方微博SDK  
