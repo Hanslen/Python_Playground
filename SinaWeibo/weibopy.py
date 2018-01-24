@@ -6,7 +6,7 @@ APP_KEY = 'xxxx'#注意替换这里为自己申请的App信息
 APP_SECRET = 'xxxx'  
 CALLBACK_URL = 'https://api.weibo.com/oauth2/default.html'#回调授权页面  
   
-#利用官方微博SDK  
+#利用官方微博SDK  pip install weibopy
 client = APIClient(app_key=APP_KEY, app_secret=APP_SECRET, redirect_uri=CALLBACK_URL)  
 #得到授权页面的url，利用webbrowser打开这个url  
 url = client.get_authorize_url()  
