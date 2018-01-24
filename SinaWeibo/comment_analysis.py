@@ -23,6 +23,7 @@ sentimentslist = []
 for com in commentlist:
 	s = SnowNLP(com)
 	sentimentslist.append(s.sentiments)
+	
 # print(sentimentslist)
 plt.hist(sentimentslist,bins=np.arange(0,1,0.02))
 plt.show()

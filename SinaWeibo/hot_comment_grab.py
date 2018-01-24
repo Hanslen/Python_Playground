@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-  
 import re,time,requests,urllib.request,pymysql
 
+# weiboid: https://m.weibo.cn/
 # weibo_id = input('输入单条微博ID：')
 weibo_id = '4198945548742549'
 url='https://m.weibo.cn/single/rcList?format=cards&id=' + weibo_id + '&type=comment&hot=1&page={}' #爬热门评论
