@@ -1,3 +1,5 @@
 # Python_Spider
-Some Python web crawler (Including Weibo comment Analysis, UNUK transcript data, BBC weather fetching, etc.)
-Recent feature developping Scrapy with booking
+1. Weibo comment Analysis 
+2. UNUK transcript data
+3. BBC weather fetching
+4. Recent feature developping Scrapy with booking
