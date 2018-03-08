@@ -2,17 +2,29 @@
 <html>
 <head>
 <title>Booking Hot_(:3=)_</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false&libraries=visualization" type="text/javascript"></script>
 <script>
+	var heatmapData = [];
+	function loadJsonFile(){
+		$.getJSON( "../forjs.json", function( data ) {
+			for(i in data){
+				var tmp = {location: new google.maps.LatLng(parseFloat(data[i].long), parseFloat(data[i].la)), weight: parseInt(data[i].weight)};
+				heatmapData.push(tmp);
+			}
+		});
+	}
+	Promise.all([loadJsonFile()]).then(() => {
+		console.log("Succee");
+	}).catch(() => {
+		console.log("error");
+	});
+
 	var map;
-	var heatmapData = [
-	{ location: new google.maps.LatLng(40.416775, -3.70379), weight: 6 },
-	{ location: new google.maps.LatLng(41.385064, 2.173403), weight: 2 },
-	{ location: new google.maps.LatLng(52.130661, -3.783712), weight: 2 },
-	{ location: new google.maps.LatLng(55.378051, -3.435973), weight: 8 },
-	{ location: new google.maps.LatLng(-40.900557, 174.885971), weight: 6 },
-	{ location: new google.maps.LatLng(40.714353, -74.005973), weight: 6 }
-	];
+	// var heatmapData = [
+	// { location: new google.maps.LatLng(33.6890603, -78.8866943), weight: 113 },
+	// { location: new google.maps.LatLng(36.1699412, -115.1398296), weight: 89 },
+	// ];
 	function initializeMap() {
 		var myMapOptions = {
 		zoom: 4,
@@ -20,13 +32,16 @@
 		mapTypeId: google.maps.MapTypeId.ROADMAP
 		};
 		map = new google.maps.Map(document.getElementById('map'),myMapOptions);
+		// console.log(heatmapData);
 		var heatmap = new google.maps.visualization.HeatmapLayer({
 			data: heatmapData,
 			dissipating: false,
+			radius: 2,
 			map: map
 		});
 	}
 	google.maps.event.addDomListener(window, 'load', initializeMap);
+
 </script>
 </head>
 <body>
