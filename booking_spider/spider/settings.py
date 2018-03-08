@@ -13,7 +13,7 @@ BOT_NAME = 'spider'
 
 SPIDER_MODULES = ['spider.spiders']
 NEWSPIDER_MODULE = 'spider.spiders'
-LOG_ENABLED = False
+# LOG_ENABLED = False
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
