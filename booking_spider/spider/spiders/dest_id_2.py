@@ -1,3 +1,5 @@
+#extract hot location's dest_id
+
 # from selenium import webdriver
 # from selenium.webdriver.common.keys import Keys
 # import re

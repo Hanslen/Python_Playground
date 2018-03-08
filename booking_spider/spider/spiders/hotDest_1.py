@@ -1,3 +1,5 @@
+# extract hot locations
+
 import scrapy
 import re
 

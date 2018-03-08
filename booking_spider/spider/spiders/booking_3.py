@@ -1,3 +1,4 @@
+# getting the latest Booking information
 import scrapy
 import re
 import csv
@@ -7,7 +8,7 @@ class BookingSpider(scrapy.Spider):
     offset = 0
     total = 0
     # ['Venice', '-132007', '45.4408474', '12.3155151']
-    with open('final.csv', newline='') as f:
+    with open('../../final.csv', newline='') as f:
         tmp = csv.reader(f)
         dest_id = list(tmp)
     id = 0
